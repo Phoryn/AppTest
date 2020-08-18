@@ -23,7 +23,7 @@ namespace UI.ViewModels
         [DisplayName("Opis")]
         [Required(ErrorMessage = "Opis jest wymagany!")]
         public string Description { get; set; }
-
+        
         [DisplayName("Koszt")]
         [Required(ErrorMessage = "Koszt jest wymagany!")]
         //[DisplayFormat(DataFormatString = "{0:0.##}")]
