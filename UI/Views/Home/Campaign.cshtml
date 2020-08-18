@@ -1,0 +1,93 @@
+﻿@model UI.ViewModels.CampaignViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+@if (Model != null)
+{
+    <h1>Edytuj</h1>
+}
+else
+{
+    <h1>Utwórz</h1>
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+        <form asp-action="Create" asp-controller="Home" method="post">
+            <input asp-for="Id" type="hidden" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Leader" class="control-label"></label>
+                <input asp-for="Leader" class="form-control" />
+                <span asp-validation-for="Leader" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cost" class="control-label"></label>
+                <input id="costInput" asp-for="Cost" class="form-control" pattern="[0-9]+([\.,][0-9]+)?" />
+                <span asp-validation-for="Cost" class="text-danger"></span>
+            </div>
+
+            @if (ViewBag.Info == true)
+            {
+                <div class="form-group">
+                    <span class="text-success"> Dodano pomyślnie!</span>
+                </div>
+            }
+            else if (ViewBag.Info == false)
+            {
+                <div class="form-group">
+                    <span class="text-danger"> Niestety nastąpił błąd.</span>
+                </div>
+            }
+
+            @if (ViewBag.Update == true)
+            {
+                <div class="form-group">
+                    <span class="text-success"> Zaktualizowano pomyślnie!</span>
+                </div>
+            }
+            else if (ViewBag.Update == false)
+            {
+                <div class="form-group">
+                    <span class="text-danger"> Niestety nastąpił błąd.</span>
+                </div>
+            }
+
+
+            @if (Model != null)
+            {
+                <div class="form-group">
+                    <input type="submit" value="Edytuj" class="btn btn-primary" />
+                </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    <input type="submit" value="Utwórz" class="btn btn-primary" />
+                </div>
+            }
+
+
+
+
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

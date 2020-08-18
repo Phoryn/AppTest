@@ -1,0 +1,18 @@
+﻿@model decimal
+@{
+    ViewData["Title"] = "Report";
+}
+@if (ViewBag.Info == true)
+{
+    <div class="text-center">
+        <h1 class="display-4">Twój koszt to:</h1>
+        <h2>@Model</h2>
+    </div>
+}
+else if (ViewBag.Info == false)
+{
+    <div class="text-center">
+        <h1 class="display-4">Jeszcze nie masz kampani!</h1>
+    </div>
+}
+

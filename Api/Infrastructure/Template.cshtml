@@ -1,0 +1,48 @@
+﻿@model List<Api.ModelDTO.CampaignDTO>
+
+
+            <h1>Wszystkie kampanie</h1>
+
+            <table class="table" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Imię
+                        </th>
+                        <th>
+                            Lider
+                        </th>
+                        <th>
+                            Opis
+                        </th>
+                        <th>
+                            Kosz
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (var z = 0; z < Model.Count; z++)
+                    {
+                        <tr>
+                            <td>
+                                @Model[z].Id.ToString()
+                            </td>
+                            <td>
+                                @Model[z].Name.ToString()
+                            </td>
+                            <td>
+                                @Model[z].Leader.ToString()
+                            </td>
+                            <td>
+                                @Model[z].Description.ToString()
+                            </td>
+                            <td>
+                                @Model[z].Cost.ToString()
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
