@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{ADCF541A-242A-4237-B6F9-6017A5E728D5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{FD975360-50CF-41EC-80FA-F6FD812121C3}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\MATEUSZ\DeveloperTestDB.mdf = C:\Users\MATEUSZ\DeveloperTestDB.mdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
