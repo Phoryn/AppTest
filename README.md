@@ -1,6 +1,7 @@
 # AppTest
 
 Utworzenie tabeli
+
 CREATE TABLE [dbo].[Campaigns] (
     [Id]          INT             IDENTITY (1, 1) NOT NULL,
     [Name]        NVARCHAR (50)   NULL,
